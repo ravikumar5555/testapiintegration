@@ -1,0 +1,33 @@
+title: Collect Event logs from Bitwarden
+type: logs
+streams:
+  - input: httpjson
+    title: Event logs
+    description: Collect Event logs via API.
+    template_path: httpjson.yml.hbs
+    vars:
+      - name: interval
+        type: text
+        title: Interval
+        description: Duration between requests to the Bitwarden. Supported units for this parameter are h/m/s.
+        default: 2m
+        multi: false
+        required: true
+        show_user: true
+      - name: initial_interval
+        type: text
+        title: Initial Interval
+        description: How far back to pull the events from Bitwarden. Supported units for this parameter are h/m/s.
+        multi: false
+        required: true
+        show_user: true
+        default: 24h
+      - name: http_client_timeout
+        type: text
+        title: HTTP client timeout
+        description: Duration before declaring that the HTTP client connection has timed out. Valid time units are ns, us, ms, s, m, h.
+        multi: false
+        required: true
+        show_user: false
+        default: 30s
+

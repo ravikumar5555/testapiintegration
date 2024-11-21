@@ -1,0 +1,7 @@
+- name: firstname
+  type: keyword
+  description: "The firstname of the user from the userId field"
+
+- name: lastname
+  type: keyword
+  description: "The lastname or title of the user"

@@ -1,0 +1,16 @@
+---
+description: "Process API data"
+processors:
+  - rename:
+      field: "firstname"
+      target_field: "firstname"
+      ignore_missing: true
+  - rename:
+      field: "lastname"
+      target_field: "lastname"
+      ignore_missing: true
+  - remove:
+      field:
+        - "email"
+        - "addresses"
+      ignore_missing: true
