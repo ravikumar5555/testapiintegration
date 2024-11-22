@@ -1,16 +1,14 @@
 ---
-description: "Process API data"
+description: "Processes user todo items"
 processors:
   - rename:
-      field: "firstname"
-      target_field: "firstname"
+      field: "userId"
+      target_field: "user_id"
       ignore_missing: true
   - rename:
-      field: "lastname"
-      target_field: "lastname"
+      field: "id"
+      target_field: "task_id"
       ignore_missing: true
   - remove:
-      field:
-        - "email"
-        - "addresses"
+      field: "completed"
       ignore_missing: true

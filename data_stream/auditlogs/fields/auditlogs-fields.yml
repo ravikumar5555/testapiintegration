@@ -1,7 +1,19 @@
-- name: firstname
-  type: keyword
-  description: "The firstname of the user from the userId field"
+- name: user_id
+  type: long
+  description: "The unique identifier of the user"
+  example: 12345
 
-- name: lastname
+- name: task_id
+  type: long
+  description: "The unique identifier of the task"
+  example: 67890
+
+- name: title
   type: keyword
-  description: "The lastname or title of the user"
+  description: "The title of the task"
+  example: "delectus aut autem"
+
+- name: completed
+  type: boolean
+  description: "Status of the task, whether it is completed or not"
+  example: false
